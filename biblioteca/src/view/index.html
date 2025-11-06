@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Library</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container conteudo">
+
+      <!-- FILTROS -->
+      <aside class="filtros">
+        <h3>Filtros</h3>
+
+        <label for="filtro-genero">Gênero</label>
+        <select id="filtro-genero">
+        </select>
+
+        <label for="filtro-nota">Nota</label>
+        <select id="filtro-nota">
+          <option value="">Todas as notas</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+
+        <button id="btn-filtro">Aplicar Filtros</button>
+      </aside>
+
+      <section class="principal">
+
+        <section class="formulario">
+          <h2>Cadastre sua Leitura</h2>
+
+          <form id="form-livro">
+            <div class="linha">
+              <label for="titulo">Título do Livro</label>
+              <input type="text" id="titulo" >
+            </div>
+
+            <div class="linha">
+              <label for="autor">Autor</label>
+              <input type="text" id="autor" >
+            </div>
+
+            <div class="linha">
+              <label for="genero">Gênero</label>
+              <input type="text" id="genero" >
+            </div>
+
+            <div class="linha">
+              <label for="paginas">Total de Páginas</label>
+              <input type="number" id="paginas" >
+            </div>
+
+            <div class="linha">
+              <label for="tempo">Tempo de Leitura</label>
+              <input type="number" id="tempo_leitura" >
+            </div>
+
+            <div class="linha">
+              <label for="nota">Sua Nota (1–5)</label>
+              <select id="nota" >
+                <option value="">Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <div class="linha">
+              <label for="resenha">Resenha</label>
+              <textarea id="resenha" rows="3"></textarea>
+            </div>
+
+            <div class="botoes">
+              <button type="reset" class="btn-cancelar">Cancelar</button>
+              <button type="" class="btn-registrar">Registrar Leitura</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="livrosRegistrado">
+          <h2>Livros Registrados</h2>
+          <div class="lista-livros" id="lista-livros"></div>
+          <div id="livrosRegistrado"></div>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Meu Diário de Leitura</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("form-livro").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+      // const id_user = 1
+      const titulo = document.getElementById("titulo").value;
+      const autor = document.getElementById("autor").value;
+      const categoria = document.getElementById("genero").value;
+      const paginas= document.getElementById("paginas").value;
+      const tempo_leitura = document.getElementById("tempo_leitura").value;
+      const nota = document.getElementById("nota").value;
+      const resenha = document.getElementById("resenha").value;
+
+      const url = "http://localhost:3000/livro";
+
+      fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "Accept": 'application/json'
+          },
+          body: JSON.stringify({
+              // id_user: id_user,
+              titulo: titulo,
+              autor: autor,
+              categoria: categoria,
+              paginas: paginas,
+              tempo_leitura: tempo_leitura,
+              nota:nota,
+              resenha:resenha,
+          })
+      })
+      .then(response => {
+        response.json()
+        console.log(response);
+        
+      } )
+      .then(data => {
+          alert("Livro adicionado com sucesso!");
+      }).catch(error => console.log("Error: Campos cadastrado incorretos ", error));
+    });
+    
+  fetch('http://localhost:3000/livro', {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+    }).then((res) => {
+            console.log(res);
+            
+        }).then(array => {
+                console.log("testando: ", array)
+
+            /* var livrosRegistradoHTML = "";
+            if (data && Array.isArray(data)) {
+              for (let index = 0; index < data.length; index++) {
+                  const element = data[index];
+                  console.log(element);
+                  livrosRegistradoHTML += `<p>${element.titulo}</p>`;
+              }
+            }
+            document.getElementById("livrosRegistrado").innerHTML = livrosRegistradoHTML; */
+        })
+        .catch((error) => console.log("ERROR: Erro ao encontrar livro ", error))
+        
+  </script>
+</body>
+</html>

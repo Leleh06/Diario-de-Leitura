@@ -6,14 +6,14 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #bbd0ff;
     color: #333;
   }
   
   /* Cabeçalho e rodapé */
   header, footer {
-    background-color: #222;
-    color: white;
+    background-color: #BDE0FE;
+    color: #333;
     text-align: center;
     padding: 15px 0;
   }
@@ -34,7 +34,7 @@
   /* Filtros */
   .filtros {
     flex: 1;
-    background: white;
+    background: #CDB4DB;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -80,7 +80,7 @@
   
   /* Formulário */
   .formulario, .livros {
-    background: white;
+    background: #CDB4DB;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -119,8 +119,8 @@
   }
   
   .btn-registrar {
-    background: #007bff;
-    color: white;
+    background: #A2D2FF;
+    color: #333;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -153,3 +153,17 @@
     justify-content: center;
   }
   
+  h2{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .livroRegistrado{
+    flex: 1 1 30%;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  } */
