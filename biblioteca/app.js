@@ -126,10 +126,16 @@ app.post("/livro", async (req, res) => {
     }
 });
 
-app.get("/livro", (req, res) => {
-    const [results] = pool.query("SELECT * FROM livro");
-    res.send(results);
+app.get("/livro", async (req, res) => {
+    try {
+        const [results] = await pool.query("SELECT * FROM livro");
+        res.status(200).json(results);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Erro ao buscar livros");
+    }
 });
+
 
 
 

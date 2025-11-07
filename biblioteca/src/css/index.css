@@ -1,169 +1,188 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #bbd0ff;
-    color: #333;
-  }
-  
-  /* Cabeçalho e rodapé */
-  header, footer {
-    background-color: #BDE0FE;
-    color: #333;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  /* Estrutura principal */
-  .conteudo {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Filtros */
-  .filtros {
-    flex: 1;
-    background: #CDB4DB;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    height: fit-content;
-  }
-  
-  .filtros h3 {
-    margin-bottom: 15px;
-  }
-  
-  .filtros label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .filtros select {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
-  
-  .filtros button {
-    margin-top: 15px;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Parte principal */
-  .principal {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Formulário */
-  .formulario, .livros {
-    background: #CDB4DB;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .linha {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input, select, textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .botoes {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-  
-  .btn-cancelar {
-    background: #aaa;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-registrar {
-    background: #A2D2FF;
-    color: #333;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Livros */
-  .lista-livros {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  
-  .livro {
-    flex: 1 1 30%;
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .capa {
-    background: #ddd;
-    height: 120px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  h2{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* .livroRegistrado{
-    flex: 1 1 30%;
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-  } */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #bbd0ff;
+  color: #333;
+}
+
+/* Cabeçalho e rodapé */
+header,
+footer {
+  background-color: #BDE0FE;
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Estrutura principal */
+.conteudo {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Filtros */
+.filtros {
+  flex: 1;
+  background: #CDB4DB;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.filtros h3 {
+  margin-bottom: 15px;
+}
+
+.filtros label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.filtros select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.filtros button {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Parte principal */
+.principal {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Formulário */
+.formulario,
+.livros {
+  background: #CDB4DB;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.linha {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancelar {
+  background: #aaa;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-registrar {
+  background: #A2D2FF;
+  color: #333;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Livros */
+.lista-livros {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.livro {
+  flex: 1 1 30%;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.capa {
+  background: #ddd;
+  height: 120px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-livro, .livrosRegistrado {
+  flex: 1;
+  background: #CDB4DB;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(151, 4, 4, 0.1);
+  height: fit-content;
+}
+
+.usuario-info {
+  flex: 1;
+  background: #CDB4DB;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.usuario-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #333;
+}

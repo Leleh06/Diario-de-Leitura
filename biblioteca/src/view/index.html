@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca</title>
   <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -16,90 +18,119 @@
   <main>
     <div class="container conteudo">
 
-      <!-- FILTROS -->
-      <aside class="filtros">
-        <h3>Filtros</h3>
+      <!-- INFORMAÇÕES DO USUÁRIO -->
+      <div class="usuario-info">
+        <h3 id="nome-usuario">Usuário</h3>
+        <p><strong id="livros-lidos">0</strong> Livros Lidos</p>
+        <p>Média de Notas: <strong id="media-notas">0.0</strong></p>
+      </div>
 
-        <label for="filtro-genero">Gênero</label>
-        <select id="filtro-genero">
-        </select>
 
-        <label for="filtro-nota">Nota</label>
-        <select id="filtro-nota">
-          <option value="">Todas as notas</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+        <aside class="filtros">
+          <h3>Filtros</h3>
 
-        <button id="btn-filtro">Aplicar Filtros</button>
-      </aside>
+          <label for="filtro-genero">Gênero</label requerid>
+          <select id="filtro-genero">
+            <option>Selecione</option>
+            <option>Romance</option>
+            <option>Ação</option>
+            <option>Comédia</option>
+            <option>Drama</option>
+            <option>Terror</option>
+            <option>Ficção científica</option>
+            <option>Fantasia</option>
+            <option>Suspense</option>
+            <option>Aventura</option>
+          </select>
 
-      <section class="principal">
+          <label for="filtro-nota">Nota</label>
+          <select id="filtro-nota">
+            <option value="">Todas as notas</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
 
-        <section class="formulario">
-          <h2>Cadastre sua Leitura</h2>
+          <button id="btn-filtro">Aplicar Filtros</button>
+        </aside>
 
-          <form id="form-livro">
-            <div class="linha">
-              <label for="titulo">Título do Livro</label>
-              <input type="text" id="titulo" >
-            </div>
+        <section class="principal">
 
-            <div class="linha">
-              <label for="autor">Autor</label>
-              <input type="text" id="autor" >
-            </div>
+          <section class="formulario">
+            <h2>Cadastre sua Leitura</h2>
 
-            <div class="linha">
-              <label for="genero">Gênero</label>
-              <input type="text" id="genero" >
-            </div>
+            <form id="form-livro">
+              <div class="linha">
+                <label for="titulo">Título do Livro</label>
+                <input type="text" id="titulo">
+              </div>
 
-            <div class="linha">
-              <label for="paginas">Total de Páginas</label>
-              <input type="number" id="paginas" >
-            </div>
+              <div class="linha">
+                <label for="autor">Autor</label>
+                <input type="text" id="autor">
+              </div>
 
-            <div class="linha">
-              <label for="tempo">Tempo de Leitura</label>
-              <input type="number" id="tempo_leitura" >
-            </div>
+              <div class="linha">
+                <label for="genero">Gênero</label>
+                <select id="genero">
+                  <option value="">Selecione</option>
+                  <option value="Romance">Romance</option>
+                  <option value="Ação">Ação</option>
+                  <option value="Comédia">Comédia</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Terror">Terror</option>
+                  <option value="Ficção científica">Ficção científica</option>
+                  <option value="Fantasia">Fantasia</option>
+                  <option value="Suspense">Suspense</option>
+                  <option value="Aventura">Aventura</option>
+                </select>
 
-            <div class="linha">
-              <label for="nota">Sua Nota (1–5)</label>
-              <select id="nota" >
-                <option value="">Selecione</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
+              </div>
 
-            <div class="linha">
-              <label for="resenha">Resenha</label>
-              <textarea id="resenha" rows="3"></textarea>
-            </div>
+              <div class="linha">
+                <label for="paginas">Total de Páginas</label>
+                <input type="number" id="paginas">
+              </div>
 
-            <div class="botoes">
-              <button type="reset" class="btn-cancelar">Cancelar</button>
-              <button type="" class="btn-registrar">Registrar Leitura</button>
-            </div>
-          </form>
+              <div class="linha">
+                <label for="tempo">Tempo de Leitura</label>
+                <input type="number" id="tempo_leitura">
+              </div>
+
+              <div class="linha">
+                <label for="nota">Sua Nota (1–5)</label>
+                <select id="nota">
+                  <option value="">Selecione</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+
+              <div class="linha">
+                <label for="resenha">Resenha</label>
+                <textarea id="resenha" rows="3"></textarea>
+              </div>
+
+              <div class="botoes">
+                <button type="reset" class="btn-cancelar">Cancelar</button>
+                <button type="" class="btn-registrar">Registrar Leitura</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="livrosRegistrado">
+            <h2>Livros Registrados</h2>
+            <div class="lista-livros" id="lista-livros"></div>
+            <div id="livrosRegistrado"></div>
+          </section>
+
         </section>
-
-        <section class="livrosRegistrado">
-          <h2>Livros Registrados</h2>
-          <div class="lista-livros" id="lista-livros"></div>
-          <div id="livrosRegistrado"></div>
-        </section>
-
-      </section>
-    </div>
+      </div>
   </main>
 
   <footer>
@@ -109,14 +140,14 @@
   </footer>
 
   <script>
-    document.getElementById("form-livro").addEventListener("submit", function(event) {
+    document.getElementById("form-livro").addEventListener("submit", function (event) {
 
       event.preventDefault();
       // const id_user = 1
       const titulo = document.getElementById("titulo").value;
       const autor = document.getElementById("autor").value;
       const categoria = document.getElementById("genero").value;
-      const paginas= document.getElementById("paginas").value;
+      const paginas = document.getElementById("paginas").value;
       const tempo_leitura = document.getElementById("tempo_leitura").value;
       const nota = document.getElementById("nota").value;
       const resenha = document.getElementById("resenha").value;
@@ -124,56 +155,129 @@
       const url = "http://localhost:3000/livro";
 
       fetch(url, {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json",
-              "Accept": 'application/json'
-          },
-          body: JSON.stringify({
-              // id_user: id_user,
-              titulo: titulo,
-              autor: autor,
-              categoria: categoria,
-              paginas: paginas,
-              tempo_leitura: tempo_leitura,
-              nota:nota,
-              resenha:resenha,
-          })
-      })
-      .then(response => {
-        response.json()
-        console.log(response);
-        
-      } )
-      .then(data => {
-          alert("Livro adicionado com sucesso!");
-      }).catch(error => console.log("Error: Campos cadastrado incorretos ", error));
-    });
-    
-  fetch('http://localhost:3000/livro', {
-        method: "GET",
+        method: "POST",
         headers: {
+          "Content-Type": "application/json",
+          "Accept": 'application/json'
+        },
+        body: JSON.stringify({
+          // id_user: id_user,
+          titulo: titulo,
+          autor: autor,
+          categoria: categoria,
+          paginas: paginas,
+          tempo_leitura: tempo_leitura,
+          nota: nota,
+          resenha: resenha,
+        })
+      })
+        .then(response => {
+          response.json()
+          console.log(response);
+
+        })
+        .then(data => {
+          alert("Livro adicionado com sucesso!");
+          carregarLivros();
+        }).catch(error => console.log("Error: Campos cadastrado incorretos ", error));
+    });
+
+    async function carregarLivros() {
+      try {
+        const resposta = await fetch("http://localhost:3000/livro", {
+          method: "GET",
+          headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-        },
-    }).then((res) => {
-            console.log(res);
-            
-        }).then(array => {
-                console.log("testando: ", array)
+          }
+        });
 
-            /* var livrosRegistradoHTML = "";
-            if (data && Array.isArray(data)) {
-              for (let index = 0; index < data.length; index++) {
-                  const element = data[index];
-                  console.log(element);
-                  livrosRegistradoHTML += `<p>${element.titulo}</p>`;
-              }
-            }
-            document.getElementById("livrosRegistrado").innerHTML = livrosRegistradoHTML; */
-        })
-        .catch((error) => console.log("ERROR: Erro ao encontrar livro ", error))
-        
+        if (!resposta.ok) throw new Error("Erro ao buscar livros");
+        const livros = await resposta.json();
+
+        const listaLivros = document.getElementById("lista-livros");
+        listaLivros.innerHTML = "";
+
+        if (!livros || livros.length === 0) {
+          listaLivros.innerHTML = "<p>Nenhum livro registrado ainda.</p>";
+          return;
+        }
+
+        livros.forEach(livro => {
+          const div = document.createElement("div");
+          div.classList.add("card-livro");
+          div.innerHTML = `
+        <h3>${livro.titulo}</h3>
+        <p><strong>Autor:</strong> ${livro.autor}</p>
+        <p><strong>Gênero:</strong> ${livro.categoria}</p>
+        <p><strong>Páginas:</strong> ${livro.paginas}</p>
+        <p><strong>Tempo de leitura:</strong> ${livro.tempo_leitura}h</p>
+        <p><strong>Nota:</strong> ${livro.nota}</p>
+        <p><strong>Resenha:</strong> ${livro.resenha}</p>
+      `;
+          listaLivros.appendChild(div);
+        });
+      } catch (erro) {
+        console.error("Erro ao carregar livros:", erro);
+      }
+    }
+
+    // chama a função assim que a página abrir
+    document.addEventListener("DOMContentLoaded", carregarLivros);
+
+    // --- FILTROS DE GÊNERO E NOTA ---
+    document.getElementById("btn-filtro").addEventListener("click", async () => {
+      const generoFiltro = document.getElementById("filtro-genero").value.trim().toLowerCase();
+      const notaFiltro = document.getElementById("filtro-nota").value;
+
+      try {
+        const resposta = await fetch("http://localhost:3000/livro", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
+        });
+
+        if (!resposta.ok) throw new Error("Erro ao buscar livros");
+        const livros = await resposta.json();
+
+        // Filtrar conforme os campos
+        const filtrados = livros.filter(livro => {
+          const generoOk = generoFiltro === "" || livro.categoria.toLowerCase().includes(generoFiltro);
+          const notaOk = notaFiltro === "" || livro.nota == notaFiltro;
+          return generoOk && notaOk;
+        });
+
+        // Atualiza a lista de livros na tela
+        const listaLivros = document.getElementById("lista-livros");
+        listaLivros.innerHTML = "";
+
+        if (filtrados.length === 0) {
+          listaLivros.innerHTML = "<p>Nenhum livro encontrado com esses filtros.</p>";
+          return;
+        }
+
+        filtrados.forEach(livro => {
+          const div = document.createElement("div");
+          div.classList.add("card-livro");
+          div.innerHTML = `
+        <h3>${livro.titulo}</h3>
+        <p><strong>Autor:</strong> ${livro.autor}</p>
+        <p><strong>Gênero:</strong> ${livro.categoria}</p>
+        <p><strong>Páginas:</strong> ${livro.paginas}</p>
+        <p><strong>Tempo de leitura:</strong> ${livro.tempo_leitura}h</p>
+        <p><strong>Nota:</strong> ${livro.nota}</p>
+        <p><strong>Resenha:</strong> ${livro.resenha}</p>
+      `;
+          listaLivros.appendChild(div);
+        });
+      } catch (erro) {
+        console.error("Erro ao aplicar filtros:", erro);
+      }
+    });
+
   </script>
 </body>
+
 </html>
