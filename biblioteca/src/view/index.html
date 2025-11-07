@@ -17,15 +17,6 @@
 
   <main>
     <div class="container conteudo">
-
-      <!-- INFORMAÇÕES DO USUÁRIO -->
-      <div class="usuario-info">
-        <h3 id="nome-usuario">Usuário</h3>
-        <p><strong id="livros-lidos">0</strong> Livros Lidos</p>
-        <p>Média de Notas: <strong id="media-notas">0.0</strong></p>
-      </div>
-
-
         <aside class="filtros">
           <h3>Filtros</h3>
 
@@ -222,10 +213,10 @@
       }
     }
 
-    // chama a função assim que a página abrir
+   
     document.addEventListener("DOMContentLoaded", carregarLivros);
 
-    // --- FILTROS DE GÊNERO E NOTA ---
+    
     document.getElementById("btn-filtro").addEventListener("click", async () => {
       const generoFiltro = document.getElementById("filtro-genero").value.trim().toLowerCase();
       const notaFiltro = document.getElementById("filtro-nota").value;
@@ -242,14 +233,14 @@
         if (!resposta.ok) throw new Error("Erro ao buscar livros");
         const livros = await resposta.json();
 
-        // Filtrar conforme os campos
+        
         const filtrados = livros.filter(livro => {
           const generoOk = generoFiltro === "" || livro.categoria.toLowerCase().includes(generoFiltro);
           const notaOk = notaFiltro === "" || livro.nota == notaFiltro;
           return generoOk && notaOk;
         });
 
-        // Atualiza a lista de livros na tela
+        
         const listaLivros = document.getElementById("lista-livros");
         listaLivros.innerHTML = "";
 
